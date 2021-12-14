@@ -6,7 +6,9 @@ module.exports = {
 
         await driver.findElement(By.xpath(`//button`)).click()
 
-        await driver.findElement(By.xpath('//span')).click()      
+        await driver.findElement(By.xpath('//span')).click() 
+        const checkedOff = driver.findElement(By.css('.checked'));
+        expect(checkedOff).toBeTruthy();     
 
 }
 }
