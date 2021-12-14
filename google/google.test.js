@@ -20,7 +20,7 @@ afterAll(async () => {
 test('I can search Google', async () => {
 
     // For this line you'll need to put the name of the search bar which you can find by inspecting that element in Chrome
-    let searchBar = await driver.findElement(By.nameBy.name('q'))
+    let searchBar = await driver.findElement(By.name('q'))
     
     // This time you'll just finish this string with something you want to search on Google, make sure you leanve that \n !
     await searchBar.sendKeys('LOTR\n')
@@ -32,7 +32,7 @@ test('I can search Google', async () => {
     searchBar = await driver.findElement(By.name('q'))
 
     // We'll use this line to clear out our old input.
-    await searchBar.clear() 
+    await clear() 
 
     // Let's do another search!
     await searchBar.sendKeys('Kittens\n')
